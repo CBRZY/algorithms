@@ -1,5 +1,5 @@
-import 'package:algorithms/algorithms.dart' as algorithms;
+import 'package:algorithms/binary_search.dart' as binary_search;
 
 void main(List<String> arguments) {
-  print('Hello world: ${algorithms.calculate()}!');
+  binary_search.search<int>([1,2,3], 2);
 }
