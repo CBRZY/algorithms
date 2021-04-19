@@ -14,10 +14,10 @@ void main() {
     });
     group('Recursive', () {
       test('Item exists in list', () {
-        expect(recursiveSearch<int>([1,2,3,4,5,6,7,8,9,10], 2, 0, 9), {'guesses': 2, 'index': 1});
+        expect(recursiveSearch<int>([1,2,3,4,5,6,7,8,9,10], 2), {'guesses': 2, 'index': 1});
       });
       test('Item doesn\'t exist in list', () {
-        expect(recursiveSearch<int>([1,2,3,4,5,6,7,8,9,10], -2, 0, 9), {'guesses': 3, 'index': -1});
+        expect(recursiveSearch<int>([1,2,3,4,5,6,7,8,9,10], -2), {'guesses': 3, 'index': -1});
       });
     });
   });
