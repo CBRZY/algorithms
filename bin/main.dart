@@ -7,10 +7,15 @@ void main(List<String> arguments) {
     numbers.add(i);
   }
 
-  execute(binary_search.search, [numbers, 887]);
+  execute(binary_search.search, [numbers, 95632]);
+  execute(binary_search.search, [numbers, -2]);
   execute(binary_search.search, [['a','b','c','d','e','f','g','h','i','j'], 'b']);
-  execute(binary_search.recursiveSearch, [numbers, 46, 0, numbers.length - 1]);
-  execute(binary_search.recursiveSearch, [['a','b','c','d','e','f','g','h','i','j'], 'b', 0, 9]);
+  execute(binary_search.search, [['a','b','c','d','e','f','g','h','i','j'], 'z']);
+
+  execute(binary_search.recursiveSearch, [numbers, 1000000, 0, numbers.length - 1]);
+  execute(binary_search.recursiveSearch, [numbers, 10000000, 0, numbers.length - 1]);
+  execute(binary_search.recursiveSearch, [['a','b','c','d','e','f','g','h','i','j'], 'c', 0, 9]);
+  execute(binary_search.recursiveSearch, [['a','b','c','d','e','f','g','h','i','j'], 'z', 0, 9]);
 }
 
 void execute(Function func, List<dynamic> arguments) {

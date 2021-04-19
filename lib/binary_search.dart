@@ -24,8 +24,8 @@ Map<String, int> search<T extends Comparable>(List<T> listToSearch, T itemToFind
   };
 }
 
-// ignore: always_declare_return_types
-recursiveSearch<T extends Comparable>(List<T> listToSearch, T itemToFind, int low, int high, {int guesses = 0}) {
+// ignore: missing_return
+Map<String, int> recursiveSearch<T extends Comparable>(List<T> listToSearch, T itemToFind, int low, int high, {int guesses = 0}) {
   if (low <= high) {
     guesses++;
     int mid = (high + low) ~/ 2;
@@ -40,6 +40,9 @@ recursiveSearch<T extends Comparable>(List<T> listToSearch, T itemToFind, int lo
       return recursiveSearch<T>(listToSearch, itemToFind, mid + 1, high, guesses: guesses);
     }
   } else {
-    return -1;
+    return <String, int>{
+      'index': -1,
+      'guesses': guesses
+    };
   }
 }
