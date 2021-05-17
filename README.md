@@ -12,3 +12,6 @@ Tests for all methods can be found in [test](https://github.com/DigitalCapitan/a
 ## Algorithms
 ### Binary Search
 Iterative and Recursive method to binary search a list of generic items
+
+### Quicksort
+Recursive method to quicksort a list of generic items
