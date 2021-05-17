@@ -13,7 +13,7 @@ List<T> quicksort<T extends Comparable>(List<T> elementArr) {
   T pivot;
   List<T> largerSubArr = [];
 
-  // Choose a pivot point at random
+  // Choose a pivot point at the middle of the array, rounded down
   pivotIndex = elementArr.length ~/ 2;
   pivot = elementArr[pivotIndex];
 
