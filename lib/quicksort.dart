@@ -4,14 +4,14 @@
 ///
 // TODO: Add option to sort ascending/descending
 List<T> quicksort<T extends Comparable>(List<T> elementArr) {
+  if (elementArr.length <= 1) {
+    return elementArr;
+  }
+
   List<T> smallerSubArr = [];
   int pivotIndex;
   T pivot;
   List<T> largerSubArr = [];
-
-  if (elementArr.length <= 1) {
-    return elementArr;
-  }
 
   // Choose a pivot point at random
   pivotIndex = elementArr.length ~/ 2;
